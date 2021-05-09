@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry
+		location="C:\Users\user\SpringbootMybatisLogin\initdb\postgresql-42.2.19.jar" />
+	<context id="postgresTables" targetRuntime="MyBatis3">
+		<jdbcConnection driverClass="org.postgresql.Driver"
+			connectionURL="jdbc:postgresql://localhost:5432/postgres" 
+			userId="postgres"
+			password="ql120808" />
+		<javaModelGenerator
+			targetPackage="ly.jp.application.model.entity"
+			targetProject="C:\Users\user\SpringbootMybatisLogin\src\main\java\" />
+		<sqlMapGenerator targetPackage="mapper"
+			targetProject="C:\Users\user\SpringbootMybatisLogin\src\main\resources\" />
+		<javaClientGenerator
+			targetPackage="ly.jp.application.mapper.auto"
+			targetProject="C:\Users\user\SpringbootMybatisLogin\src\main\java\"
+			type="XMLMAPPER" />
+<!-- 		<table schema="public" tableName="testTbl" /> -->
+<!-- 		<table schema="public" tableName="UserDetail" /> -->
+		<table schema="public" tableName="%" delimitIdentifiers="true" delimitAllColumns="true"></table>
+	</context>
+</generatorConfiguration>
